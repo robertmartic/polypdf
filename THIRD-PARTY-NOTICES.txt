@@ -1,0 +1,25 @@
+PolyPDF uses PDFium, distributed through bblanchon.PDFium.Win32 151.0.7920.
+Binary source: https://www.nuget.org/packages/bblanchon.PDFium.Win32/151.0.7920
+Distribution: https://github.com/bblanchon/pdfium-binaries
+PDFium source: https://pdfium.googlesource.com/pdfium/
+
+PDFium and its dependencies retain their respective BSD and other licenses.
+The NuGet package metadata declares Apache-2.0. The corresponding release
+archive also includes an MIT notice for the binary distribution project.
+These notices are preserved along with PDFium's BSD notice and dependency
+license texts. Complete bundled texts are in licenses/ in the binary
+distribution, or vendor/licenses/ in the source tree.
+
+Windows OCR is a Windows operating system component, not a bundled Tesseract
+dependency. Recognition runs locally and requires an installed language pack.
+Fonts are loaded from Windows only when requested by the user; font files
+are not distributed with this application. Added text embeds the selected
+font in the resulting PDF.
+
+Self-contained distributions include the Microsoft .NET runtime, whose license
+and third-party notices are included in the distribution.
+
+The conventional Windows installer is built with NSIS 3.13, using its
+unmodified zlib compression stub and bundled standard plug-ins. NSIS is
+separate from the PolyPDF source license; its complete notices are included
+in licenses/nsis/COPYING.txt (vendor/licenses/nsis/ in the source tree).
