@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Updated About and installer information to reflect the current software terms and private development model.
+- Kept all existing tools available without payment, activation or a subscription.
+- Preserved legacy MIT and third-party license notices.
+
 ## 0.1.1
 
 - Updated the PolyPDF icon in the application, window title bars, Windows shortcuts and installer.

@@ -34,6 +34,6 @@ An isolated regression test terminates a test helper after directory replacement
 
 ## Release assets and automation
 
-Publish the conventional setup, portable ZIP, source ZIP, `PolyPDF-VERSION-manifest.json`, and `PolyPDF-VERSION-maintenance.exe`. When building against an earlier release manifest, also publish `PolyPDF-BASE-to-VERSION-delta.zip`. Publish source and verify every asset before making the release public. See AGENTS.md for the agreed release workflow.
+Publish the conventional setup, portable ZIP, `PolyPDF-VERSION-manifest.json`, and `PolyPDF-VERSION-maintenance.exe`. When building against an earlier release manifest, also publish `PolyPDF-BASE-to-VERSION-delta.zip`. Development source is private. Verify every public asset before making the release public.
 
-Build with `tools/publish.ps1 -BaseManifest PATH` (omit the base for the initial updater release), then run `tools/build-installer.ps1 -SkipPublish` both normally and with `-MaintenanceOnly`. The source package contains these scripts; generated manifests/packages remain outside source history.
+Build with `tools/publish.ps1 -BaseManifest PATH` (omit the base for the initial updater release), then run `tools/build-installer.ps1 -SkipPublish` both normally and with `-MaintenanceOnly`. These developer scripts are maintained privately; public releases contain application packages and customer documentation only.

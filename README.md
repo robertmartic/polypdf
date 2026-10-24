@@ -1,14 +1,16 @@
 # PolyPDF
 
-A free, open-source PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# / .NET 10 / WPF. English interface, light and dark themes, local document processing, no accounts or subscription.
+**[Download PolyPDF for Windows](https://github.com/robertmartic/polypdf/releases/latest)** — under Assets choose the file ending in `-setup.exe`.
+
+A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# / .NET 10 / WPF. English interface, light and dark themes, local document processing, no accounts or subscription.
 
 ## Run the finished app
 
-Current development version: **0.1.1 (pre-1.0)**. Browse the published source at [robertmartic/polypdf](https://github.com/robertmartic/polypdf) and published packages at [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
+Current development version: **0.1.2 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
 
-Run `PolyPDF-0.1.1-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.1.2-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.1.1-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`. The `PolyPDF-0.1.1-source.zip` package contains source code and build tools; follow Build from source below to build it.
+For portable use, extract `PolyPDF-0.1.2-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
 
 The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
 
@@ -21,6 +23,10 @@ To uninstall an installed copy, close PolyPDF and use its entry in Windows insta
 ## Moving from the earlier development builds
 
 The new official version sequence starts at 0.1.0 and retains the existing feature set. Earlier development builds numbered 0.2.x through 0.5.0 belong to the previous sequence. They cannot update down to 0.1.0: first download the verified 0.1.0 setup, close PolyPDF, back up your local settings/recovery folder, uninstall the earlier build normally, then install 0.1.0. The uninstaller preserves settings, recovery data and personal documents. See [installation instructions](docs/INSTALLATION.md). Subsequent newer releases use the in-app updater.
+
+## Availability
+
+All current tools are free to use, including for commercial work. No subscription, activation or account is required. Future optional Pro features may use a one-time purchase; there are no Pro restrictions in this release. Development from 0.1.2 is private. Earlier MIT releases retain their existing permissions.
 
 ## Everyday tools
 
@@ -78,47 +84,6 @@ Documents are read into memory. Large files, page previews and full-document und
 | Ctrl+mouse wheel | Zoom |
 | Escape | Return to text selection |
 
-## Build from source
+## Software terms and notices
 
-Requirements: Windows 10 version 2004 or newer / Windows 11 x64, .NET 10 SDK with Windows desktop build support, PowerShell, Windows `tar`, and internet access for the first dependency download and .NET restore. Run the commands from the extracted source folder containing `PolyPDF.csproj`. A newer installed SDK may select different servicing versions of the .NET runtime; the tested release runtime is recorded below.
-
-```powershell
-powershell -ExecutionPolicy Bypass -File tools/bootstrap.ps1
-dotnet build PolyPDF.csproj -c Release
-dotnet run --project PolyPDF.csproj -c Release
-```
-
-PDFium is pinned to `bblanchon.PDFium.Win32` version `151.0.7920`. Self-contained packages include .NET 10; its servicing version can vary with the SDK patch selected by `global.json`. The SDK and runtime versions are recorded in the CI build report. The bootstrap downloads the native DLL, headers and full upstream license collection. No paid PDF SDK is used. Font files are read from the installed Windows system; fonts themselves are not shipped with the app.
-
-`tools/bootstrap.ps1` checks SHA-256 hashes of the pinned NuGet package and corresponding PDFium release archive before extraction. The expected hashes are recorded in the script. Do not replace a hash merely to bypass a failed download check; dependency changes need a reviewed version and matching license notices.
-
-Create a self-contained portable distribution:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File tools/publish.ps1
-```
-
-To also build the conventional installer, run `tools/bootstrap-installer.ps1` once and `tools/build-installer.ps1 -SkipPublish` after publishing. This uses a hash-pinned, portable NSIS 3.13 compiler in the workspace; no global build-tool installation is needed. See docs/INSTALLATION.md for isolated installer lifecycle tests.
-
-Run the integration checks without displaying a window:
-
-```powershell
-Start-Process bin/Release/net10.0-windows10.0.19041.0/win-x64/PolyPDF.exe -ArgumentList '--self-test' -Wait
-Get-Content bin/Release/net10.0-windows10.0.19041.0/win-x64/test-results/result.txt
-```
-
-The checks exercise actual native PDF operations: text and Unicode round trips, replacement, undo/redo, highlights, comments, drawing, page order, rotation coordinates, extracting, merging, deleting, transaction rollback, save/reopen and rendering. Regression checks verify saved revision tracking and branching, font reuse after Undo/reopen, all four page rotations, encrypted recovery, isolation from live sessions, recovery after an actual subprocess exit without cleanup, and retention of damaged recovery files.
-
-Run the additional UI checks with the same executable and `--ui-test`, after `--self-test`. These check tool mode reset, dispatcher responsiveness, off-screen light/dark layouts, password masking, Fit Height on resize/navigation/rotation, active tool groups, embedded Changelog scrolling and English Windows OCR. UI checks require the `en-US` Windows OCR language pack and a Windows desktop session. Check the process exit code and `ui-result.txt`; failures are written to `ui-error.txt`. All results are in `test-results` beside the executable.
-
-Optional independent PDF fixtures can be generated with `tools/create_test_fixtures.py` using Python with `reportlab` and `pypdf`. These are generated examples, including files with the test password `reader`, and are excluded from source packages. When present in `tests/fixtures`, `--self-test` additionally checks external-font editing and password/permission handling. The core checks do not require Python or these fixtures.
-
-## Source packaging and contributions
-
-Run `powershell -ExecutionPolicy Bypass -File tools/package-source.ps1` to create the source ZIP in `dist/`. It stages a fresh copy of source, selected documentation, assets, build tools and license notices. It excludes executables, dependency downloads, personal PDFs, generated test results and local settings. Review the staged file list before public publication; `.gitignore` does not remove files already tracked by Git.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development checks, [ROADMAP.md](ROADMAP.md) for planned milestones, [CHANGELOG.md](CHANGELOG.md) for released changes, and [the GitHub publication plan](docs/GITHUB-PUBLISHING.md) for the next agreed step.
-
-## License
-
-PolyPDF source code is MIT licensed. PDFium and its dependencies retain their own licenses; full notices are included in the distribution. The self-contained build also includes Microsoft's .NET runtime license and notices. See LICENSE and THIRD-PARTY-NOTICES.txt.
+See [LICENSE](LICENSE) for the current software use terms. Releases 0.1.0 and 0.1.1 and their MIT-licensed code retain their existing permissions; the notice is preserved in [LICENSE-MIT-LEGACY.txt](LICENSE-MIT-LEGACY.txt). PDFium, the .NET runtime and other bundled dependencies retain their own licenses. See [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) and the bundled licenses folder.

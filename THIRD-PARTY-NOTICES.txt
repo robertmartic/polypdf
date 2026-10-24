@@ -1,3 +1,5 @@
+PolyPDF portions previously released through version 0.1.1 retain their MIT license. The original notice is included in LICENSE-MIT-LEGACY.txt. Current software use terms are in LICENSE; dependency permissions below are unchanged.
+
 PolyPDF uses PDFium, distributed through bblanchon.PDFium.Win32 151.0.7920.
 Binary source: https://www.nuget.org/packages/bblanchon.PDFium.Win32/151.0.7920
 Distribution: https://github.com/bblanchon/pdfium-binaries

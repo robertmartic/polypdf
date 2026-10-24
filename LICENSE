@@ -1,21 +1,32 @@
-MIT License
+PolyPDF Software Use Terms
+Copyright (c) 2026 Robert Martic.
 
-Copyright (c) 2026 PolyPDF contributors
+These terms apply to PolyPDF releases from 0.1.2 onward. Original changes
+made after the MIT-licensed 0.1.1 release are reserved to their rights holder.
+Future source development is private; these terms do not grant an open-source
+license for those new changes.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is granted to install and use this release, without a subscription
+or payment, for personal and commercial work. All currently included tools
+are available without activation. This permission to use this copy does not
+expire solely because a newer release becomes available. It does not promise
+that every future feature or major version will be provided without charge.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You may share unmodified official installation and portable packages for this
+release without charging a fee, provided all license and attribution notices
+are retained. No other permission to reproduce, distribute, modify or
+sublicense the reserved post-0.1.1 source changes is granted, except as
+required by applicable law or a separate written agreement.
+
+The source and releases previously published under the MIT license, including
+0.1.0 and 0.1.1, retain their MIT permissions. Existing MIT-licensed portions
+remain subject to that license; these terms do not remove those permissions.
+The original notice is retained in LICENSE-MIT-LEGACY.txt. Third-party
+components retain their own licenses and permissions; see
+THIRD-PARTY-NOTICES.txt and licenses/.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE RIGHTS HOLDER
+IS NOT LIABLE FOR CLAIMS OR DAMAGES ARISING FROM THE SOFTWARE. Nothing in
+these terms excludes rights or liabilities that cannot lawfully be excluded.
