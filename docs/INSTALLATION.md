@@ -5,7 +5,7 @@ PolyPDF provides a conventional per-user installer. It does not require administ
 ## Install
 
 1. Close every PolyPDF window.
-2. Run `PolyPDF-0.1.0-setup.exe`.
+2. Run `PolyPDF-0.1.1-setup.exe`.
 3. Choose desktop and Start menu shortcuts on the components page.
 4. Choose a new, empty folder, normally `%LOCALAPPDATA%\Programs\PolyPDF`, then install.
 5. Launch from the selected shortcut or the installer's optional launch checkbox.
@@ -22,7 +22,7 @@ Installed copies can use About > Updates and optional startup checks. See UPDATE
 
 ## One-time transition to the 0.1.0 baseline
 
-Earlier development installers numbered 0.2.x through 0.5.0 compare as newer than 0.1.0. The updater and installer intentionally retain their downgrade protection. Download and verify the new setup before removing your working installation. Close PolyPDF and copy %LOCALAPPDATA%\PolyPDF to a private backup location; recovery data remains tied to the current Windows user and machine. Uninstall the earlier build through Windows installed apps, then install PolyPDF-0.1.0-setup.exe into the normal empty program folder and select your shortcut choices. Normal uninstall preserves settings, document recovery and personal PDFs. Do not remove sibling update backup folders or document recovery copies during this transition. After installation, confirm 0.1.0 in About and launch using the desktop shortcut. Future releases with higher version numbers can update in place.
+Earlier development installers numbered 0.2.x through 0.5.0 compare as newer than 0.1.0. The updater and installer intentionally retain their downgrade protection. Download and verify the new setup before removing your working installation. Close PolyPDF and copy %LOCALAPPDATA%\PolyPDF to a private backup location; recovery data remains tied to the current Windows user and machine. Uninstall the earlier build through Windows installed apps, then install PolyPDF-0.1.1-setup.exe into the normal empty program folder and select your shortcut choices. Normal uninstall preserves settings, document recovery and personal PDFs. Do not remove sibling update backup folders or document recovery copies during this transition. After installation, confirm 0.1.0 in About and launch using the desktop shortcut. Future releases with higher version numbers can update in place.
 
 ## Uninstall
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Updated the PolyPDF icon in the application, window title bars, Windows shortcuts and installer.
+- Added icon sizes for clear display at different Windows scaling settings.
+
 ## 0.1.0
 
 - Initial release of the Windows PDF workspace with an English interface, light and dark themes, and visible version information.
