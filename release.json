@@ -1,6 +1,6 @@
 {
-  "SourceRepository": "robertmartic/polypdf-source",
-  "SourceRevision": "4acb26d95189f8cf1d10baa633b97a48fa3ff8ea",
-  "DistributionRepository": "robertmartic/polypdf",
-  "Version": "0.1.3"
+  "Version": "0.1.4",
+  "SourceRevision": "7f2e35bf5169ef5ba09a084fbeb29012d6274342",
+  "Distribution": "robertmartic/polypdf",
+  "SourcePolicy": "Private development from 0.1.2; earlier MIT releases retain their permissions."
 }

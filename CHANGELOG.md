@@ -1,11 +1,16 @@
 # PolyPDF changelog
 
+## 0.1.4
+
+- Inspect the actual text, font, size and colour of selected PolyPDF-added text.
+- Edit supported multiline blocks with Apply and Cancel, including blank lines.
+- Preserve text position, page rotation and drawing order; undo or redo the whole edit in one step.
+- Clearly identify unsupported formatting and reject characters unavailable in the selected font.
+
 ## 0.1.3
 
 - Added optional PolyHUB integration for coordinated updates while preserving application save prompts.
 - Coordinated setup, uninstall and update locking.
-
-# Changelog
 
 ## 0.1.2
 
