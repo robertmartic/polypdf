@@ -1,3 +1,10 @@
+# PolyPDF changelog
+
+## 0.1.3
+
+- Added optional PolyHUB integration for coordinated updates while preserving application save prompts.
+- Coordinated setup, uninstall and update locking.
+
 # Changelog
 
 ## 0.1.2

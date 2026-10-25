@@ -37,3 +37,7 @@ An isolated regression test terminates a test helper after directory replacement
 Publish the conventional setup, portable ZIP, `PolyPDF-VERSION-manifest.json`, and `PolyPDF-VERSION-maintenance.exe`. When building against an earlier release manifest, also publish `PolyPDF-BASE-to-VERSION-delta.zip`. Development source is private. Verify every public asset before making the release public.
 
 Build with `tools/publish.ps1 -BaseManifest PATH` (omit the base for the initial updater release), then run `tools/build-installer.ps1 -SkipPublish` both normally and with `-MaintenanceOnly`. These developer scripts are maintained privately; public releases contain application packages and customer documentation only.
+
+## Optional PolyHUB integration
+
+This release supports the local PolyHUB protocol for coordinated updates. PolyHUB requests the existing application updater; download controls, save prompts, deltas/full fallback and rollback remain in this application. It also verifies the installed result. The app remains fully usable without PolyHUB. Setup, uninstall and update helpers coordinate maintenance to avoid concurrent changes.
