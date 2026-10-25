@@ -6,11 +6,11 @@ A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# /
 
 ## Run the finished app
 
-Current development version: **0.1.4 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
+Current development version: **0.1.5 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
 
-Run `PolyPDF-0.1.4-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.1.5-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.1.4-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
+For portable use, extract `PolyPDF-0.1.5-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
 
 The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
 
@@ -61,7 +61,7 @@ Undo/Redo tracks the saved revision, including branches after Undo. Added text r
 
 Existing text editing is intentionally limited to top-level, unskewed and unrotated text objects. A PDF may split one word into several objects. Embedded subset fonts may not contain replacement characters; unsupported replacements roll back. Text does not automatically reflow, and longer replacements may overlap nearby content. It is not a full word processor. Scanned text requires OCR and cannot be directly edited as a text object.
 
-Move text supports top-level text objects carrying PolyPDF insertion marks. It does not move original third-party text, scans, images, comments, highlights or drawing strokes. Other PDF editors may flatten or discard these marks, preventing later selection. Use Text properties to edit supported block content with Apply/Cancel. Blank lines, rotation and drawing order are preserved. Mixed formatting remains read-only.
+Move text supports top-level text objects carrying PolyPDF insertion marks. It does not move original third-party text, scans, images, comments, highlights or drawing strokes. Other PDF editors may flatten or discard these marks, preventing later selection. Use Text properties to edit supported block content, font, size (6–160 pt) and custom colour (#RRGGBB or #AARRGGBB) with Apply/Cancel. Blank lines, rotation and drawing order are preserved. Mixed formatting remains read-only.
 
 OCR requires the matching Windows OCR language pack, such as `en-US` or `hr-HR`. Install it in Windows Settings > Time & language > Language & region > Language options. Availability depends on the Windows installation and language. OCR returns text for copying; it does not yet create a searchable PDF text layer. Recognition can contain errors.
 

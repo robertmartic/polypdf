@@ -1,5 +1,13 @@
 # PolyPDF changelog
 
+## 0.1.5
+
+- Change the font, point size and colour of supported PolyPDF-added text in Text properties.
+- Show the selected block's actual formatting, with support for custom RGB and translucent colours.
+- Apply text and formatting together as one undoable edit, preserving position and rotation.
+- Preserve repeated spaces and blank lines in edited blocks through saving and reopening.
+- Validate unsupported characters, invalid sizes and colours before applying changes.
+
 ## 0.1.4
 
 - Inspect the actual text, font, size and colour of selected PolyPDF-added text.
