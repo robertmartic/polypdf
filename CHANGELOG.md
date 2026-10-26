@@ -1,5 +1,15 @@
 # PolyPDF changelog
 
+## 0.2.0
+
+- Open and switch PDFs in Fit Width by default. Fit Height remains available manually.
+- Delete selected PolyPDF-added text blocks with Delete text or the Delete key while the page has focus.
+- Undo and redo an entire multiline deletion in one step, preserving neighbouring content.
+- Fixed applying content and formatting changes from Text properties.
+- Keep text-field editing separate from PDF deletion and clear selection on empty clicks or page changes.
+- Distinguish Edit original text from the properties editor for PolyPDF-added blocks.
+- Improve the complete select, move, edit, format and delete workflow, with checks for rotated pages, saving, recovery and updates.
+
 ## 0.1.5
 
 - Change the font, point size and colour of supported PolyPDF-added text in Text properties.

@@ -6,11 +6,11 @@ A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# /
 
 ## Run the finished app
 
-Current development version: **0.1.5 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
+Current development version: **0.2.0 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
 
-Run `PolyPDF-0.1.5-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.2.0-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.1.5-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
+For portable use, extract `PolyPDF-0.2.0-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
 
 The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
 
@@ -28,6 +28,10 @@ The new official version sequence starts at 0.1.0 and retains the existing featu
 
 All current tools are free to use, including for commercial work. No subscription, activation or account is required. Future optional Pro features may use a one-time purchase; there are no Pro restrictions in this release. Development from 0.1.2 is private. Earlier MIT releases retain their existing permissions.
 
+## Opening and editing PDFs
+
+Newly opened PDFs and document-tab switches use Fit Width. Fit Height remains available manually; manual zoom is retained during window resizing and page navigation. Use Annotate > Move text to select a PolyPDF-added block, then Text properties to edit its content or formatting, or Delete text to remove it. Empty clicks and Escape clear the selection. Changes to supported blocks are undoable; text does not automatically reflow.
+
 ## Everyday tools
 
 - Multiple document tabs, drag-and-drop, recent files, thumbnails, Fit Width, Fit Height and zoom.
@@ -37,7 +41,8 @@ All current tools are free to use, including for commercial work. No subscriptio
 - Add multiline text with Segoe UI, Arial or Times New Roman, font size and colour.
 - Inspect and edit supported added text through Annotate > Move text > Text properties, including actual font, size, colour and content.
 - Select and move supported PolyPDF-added text with Annotate > Move text. New multiline insertions move together; older additions move as individual lines. Drag the frame and release to place the text, or press Escape to cancel. Undo/Redo applies to each completed move.
-- Edit a supported existing text object, keeping its font and position.
+- Delete a selected PolyPDF-added block with Delete text, or Delete while the PDF page has keyboard focus. Undo restores the complete block. Original text and scans are excluded from this deletion tool.
+- Use Edit original text for limited editing of supported original PDF objects. Use Move text > Text properties for PolyPDF-added text.
 - Highlight selected text, draw freehand and add PDF comments. Use View > Comments to read notes on the current page.
 - Rotate, reorder, insert and delete pages. Extract page ranges and merge PDFs.
 - Undo and redo document edits. History is kept in memory (up to 25 revisions, with a 96 MB target budget; a single large revision can exceed it).
