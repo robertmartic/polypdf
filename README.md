@@ -6,15 +6,15 @@ A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# /
 
 ## Run the finished app
 
-Current development version: **0.2.0 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
+Current version: **0.2.1 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases).
 
-Run `PolyPDF-0.2.0-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.2.1-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.2.0-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
+For portable use, extract `PolyPDF-0.2.1-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together.
 
 The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
 
-Version 0.1.1 introduces the new red PolyPDF icon throughout the application and Windows integration. The initial 0.1.0 baseline includes supported text movement, annotations, page organisation, local OCR, encrypted recovery, conventional installation and in-app updates. Release notes are embedded in About > Changelog and can be read offline. Fit Width and Fit Height follow window resizing, page navigation and rotation; manual zoom exits fitting mode. Windows-owned file and printer pickers retain the operating system's appearance. See ROADMAP.md for subsequent milestones.
+Version 0.2.1 introduces compact vector toolbars with visible active tools, accessible names and a More menu when complete command groups do not fit. The initial 0.1.0 baseline includes supported text movement, annotations, page organisation, local OCR, encrypted recovery, conventional installation and in-app updates. Release notes are embedded in About > Changelog and can be read offline. Fit Width and Fit Height follow window resizing, page navigation and rotation; manual zoom exits fitting mode. Windows-owned file and printer pickers retain the operating system's appearance.
 
 The conventional installer replaces the earlier copy-only `Install.cmd` workflow. It preserves the registered installation folder and shortcut choices on reinstall, rejects downgrades, and never forces the default PDF association. To choose PolyPDF as the default, use Windows Settings > Apps > Default apps, or Open with > Choose another app.
 
@@ -35,7 +35,7 @@ Newly opened PDFs and document-tab switches use Fit Width. Fit Height remains av
 ## Everyday tools
 
 - Multiple document tabs, drag-and-drop, recent files, thumbnails, Fit Width, Fit Height and zoom.
-- Persistent active tool-group indicator and embedded release history in About > Changelog.
+- Persistent active tool and tool-group indicators, shortcut-aware tooltips and embedded release history in About > Changelog.
 - Select text by dragging a rectangle. Copy the selection with Ctrl+C or use Copy page text.
 - Search text with Ctrl+F and Find next. Results wrap through the document.
 - Add multiline text with Segoe UI, Arial or Times New Roman, font size and colour.

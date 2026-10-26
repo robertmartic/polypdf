@@ -1,5 +1,11 @@
 # PolyPDF changelog
 
+## 0.2.1
+
+- Replace text-heavy PDF toolbars with compact vector icons grouped for View, Annotate and Pages work.
+- Show the active selection, text, move, edit, highlight, drawing and comment tools clearly in light and dark themes.
+- Add accessible names, shortcut-aware tooltips, keyboard focus and a More menu for tools that do not fit the available width.
+
 ## 0.2.0
 
 - Open and switch PDFs in Fit Width by default. Fit Height remains available manually.
