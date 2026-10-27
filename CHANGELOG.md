@@ -1,8 +1,18 @@
 # PolyPDF changelog
 
+## 0.3.0
+
+- Browse comments, highlights and supported drawings across the whole document in the Annotations panel.
+- Filter the list and jump to a selected annotation with a visible selection frame.
+- Edit supported comment text with Apply and Cancel, including multiline Unicode notes.
+- Delete supported comments, highlights and newly marked PolyPDF drawings with one-step Undo/Redo.
+- Keep locked, linked and unsupported annotations read-only; protect original page content and older unmarked drawings.
+- Fix new highlight bounds so highlights also display in other PDF readers.
+- Preserve annotation changes through saving, reopening and recovery, with safer page-focused keyboard actions.
+
 ## 0.2.1
 
-- Replace text-heavy PDF toolbars with compact vector icons grouped for View, Annotate and Pages work.
+- Replace text-heavy PDF toolbars with compact local vector icons grouped for View, Annotate and Pages work.
 - Show the active selection, text, move, edit, highlight, drawing and comment tools clearly in light and dark themes.
 - Add accessible names, shortcut-aware tooltips, keyboard focus and a More menu for tools that do not fit the available width.
 
