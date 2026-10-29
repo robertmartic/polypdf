@@ -1,6 +1,6 @@
 # In-app updates
 
-Installed copies can check public GitHub Releases at startup, or manually from About > Updates. Startup checks can be disabled there. PolyPDF sends no documents or account tokens; it requests release metadata and the selected public assets from robertmartic/polypdf.
+Installed copies check the public signed channel at `https://updates.polystudio.tools/polypdf/stable.json` at most once every 24–30 hours, or manually from About > Updates. Startup checks can be disabled there and manual checks remain immediate. PolyPDF sends no documents, account tokens or telemetry. Selected public packages are downloaded only from `https://downloads.polystudio.tools/polypdf/`.
 
 Choose Update now to download and verify an update, or Later to keep using the current version. Downloads can be cancelled before installation. Unsaved documents use the normal Save / Don't save / Cancel decisions before restarting. Other PolyPDF instances must also be closed.
 
@@ -12,7 +12,7 @@ The 0.1.0 release is a full baseline with no delta from the retired development 
 
 The manifest lists each program file, its size and SHA-256. A delta is used only when its base version and every installed base-file hash match. It contains whole new/changed files; it is not a patch of individual byte ranges. Unchanged .NET runtime and PDFium files need not be downloaded again. If the base is unavailable or modified, the full portable package is used instead.
 
-The manifest and a small maintenance installer are downloaded alongside the payload. The maintenance installer refreshes the Windows version registration and uninstaller without including the large program payload. All downloaded assets are checked against the SHA-256 digests returned by the official GitHub release API over HTTPS. This trusts the project's GitHub account and release service; packages are not code-signed yet.
+The manifest and a small maintenance installer are downloaded alongside the payload. The maintenance installer refreshes the Windows version registration and uninstaller without including the large program payload. Release metadata is signed with a PolyStudio update key whose public key is embedded in the application. The signed data fixes the application/channel identity, version, package names, immutable HTTPS URLs, sizes and SHA-256 digests. The updater rejects unknown signing keys, invalid signatures, other applications, unexpected hosts or paths and redirected downloads. Packages are not Authenticode code-signed yet.
 
 The helper runs from a separate local copy, waits for the app to exit, copies the existing installation into a sibling staging folder and applies the update there. It verifies every target file before switching folders. On a replacement or registration error it restores the old folder. Preferences and recovery data remain in the user's separate PolyPDF data folder. Unrelated files in the installation directory are preserved.
 
@@ -34,9 +34,9 @@ An isolated regression test terminates a test helper after directory replacement
 
 ## Release assets and automation
 
-Publish the conventional setup, portable ZIP, `PolyPDF-VERSION-manifest.json`, and `PolyPDF-VERSION-maintenance.exe`. When building against an earlier release manifest, also publish `PolyPDF-BASE-to-VERSION-delta.zip`. Development source is private. Verify every public asset before making the release public.
+Publish the conventional setup, portable ZIP, `PolyPDF-VERSION-manifest.json`, and `PolyPDF-VERSION-maintenance.exe` to the immutable R2 path `polypdf/VERSION/`. When building against an earlier release manifest, also publish `PolyPDF-BASE-to-VERSION-delta.zip`. Sign the versioned channel metadata and update `stable.json` only after anonymous download/hash verification succeeds. Development source, private keys and developer reports remain private.
 
-Build with `tools/publish.ps1 -BaseManifest PATH` (omit the base for the initial updater release), then run `tools/build-installer.ps1 -SkipPublish` both normally and with `-MaintenanceOnly`. These developer scripts are maintained privately; public releases contain application packages and customer documentation only.
+Build locally from a clean private revision with the official private CI process. GitHub Actions retains no binary artifacts. Generate signed channel files with the controlled release tools, upload packages to Cloudflare and anonymously verify every object before changing `stable.json`. Developer scripts are maintained privately; public services contain application packages and customer documentation only.
 
 ## Optional PolyHUB integration
 

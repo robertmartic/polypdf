@@ -6,11 +6,11 @@ A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# /
 
 ## Run the finished app
 
-Current development version: **0.3.0 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). A local build is not automatically a published release.
+Current development version: **0.3.1 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). Version 0.3.1 is the compatibility bridge to the signed PolyStudio update service. A local build is not automatically a published release.
 
-Run `PolyPDF-0.3.0-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.3.1-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.3.0-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
+For portable use, extract `PolyPDF-0.3.1-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
 
 The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
 

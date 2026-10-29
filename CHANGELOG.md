@@ -1,5 +1,12 @@
 # PolyPDF changelog
 
+## 0.3.1
+
+- Move automatic and manual update checks to the official PolyStudio update service.
+- Verify signed release information before accepting package names, download locations, sizes and SHA-256 hashes.
+- Limit automatic checks to once every 24–30 hours while keeping manual checks immediately available.
+- Keep the existing verified file-level differential update, full-package fallback and rollback behaviour.
+
 ## 0.3.0
 
 - Browse comments, highlights and supported drawings across the whole document in the Annotations panel.

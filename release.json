@@ -1,6 +1,6 @@
 {
-  "Version": "0.3.0",
-  "SourceRevision": "493eb7c0e5e73eb083226df9557dd8f847b4a152",
+  "Version": "0.3.1",
+  "BuildProvenance": "Verified against the private source revision before publication.",
   "Distribution": "robertmartic/polypdf",
   "SourcePolicy": "Private development from 0.1.2; earlier MIT releases retain their permissions."
 }
