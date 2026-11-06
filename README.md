@@ -1,16 +1,16 @@
 # PolyPDF
 
-**[Download PolyPDF for Windows](https://github.com/robertmartic/polypdf/releases/latest)** — under Assets choose the file ending in `-setup.exe`.
+**[Download PolyPDF 0.4.0 for Windows](https://downloads.polystudio.tools/polypdf/0.4.0/PolyPDF-0.4.0-setup.exe)**
 
 A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# / .NET 10 / WPF. English interface, light and dark themes, local document processing, no accounts or subscription.
 
 ## Run the finished app
 
-Current development version: **0.3.1 (pre-1.0)**. Download official packages from [GitHub Releases](https://github.com/robertmartic/polypdf/releases). Version 0.3.1 is the compatibility bridge to the signed PolyStudio update service. A local build is not automatically a published release.
+Current version: **0.4.0 (pre-1.0)**. [Download the Windows installer](https://downloads.polystudio.tools/polypdf/0.4.0/PolyPDF-0.4.0-setup.exe). Installed copies receive signed updates from PolyStudio.
 
-Run `PolyPDF-0.3.1-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.4.0-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.3.1-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
+For portable use, extract `PolyPDF-0.4.0-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
 
 The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
 
@@ -44,9 +44,9 @@ Newly opened PDFs and document-tab switches use Fit Width. Fit Height remains av
 - Delete a selected PolyPDF-added block with Delete text, or Delete while the PDF page has keyboard focus. Undo restores the complete block. Original text and scans are excluded from this deletion tool.
 - Use Edit original text for limited editing of supported original PDF objects. Use Move text > Text properties for PolyPDF-added text.
 - Highlight selected text, draw freehand and add PDF comments. Use the comments icon in View or Annotate to open Annotations for the whole document. Filter comments, highlights or marked drawings; select an item to jump to it. Use Edit comment or Delete for supported items.
-- Rotate, reorder, insert and delete pages. Extract page ranges and merge PDFs.
+- Ctrl- or Shift-select thumbnails to rotate or delete a group. Drag selected thumbnails to reorder them. Extract selected pages or a custom range to a new PDF and confirm the file order before merging.
 - Undo and redo document edits. History is kept in memory (up to 25 revisions, with a 96 MB target budget; a single large revision can exceed it).
-- Save, Save as, export a page to PNG, and print the document.
+- Save, Save as, and export a page to PNG. Print all pages, the current page, selected thumbnails or a custom range with copy count and scaling options.
 - Offline OCR of the current page using Windows OCR, with editable language code and copyable results.
 - Automatic encrypted recovery checkpoints for unsaved work, with restoration offered after an interrupted session.
 
@@ -76,7 +76,7 @@ Move text supports top-level text objects carrying PolyPDF insertion marks. It d
 
 OCR requires the matching Windows OCR language pack, such as `en-US` or `hr-HR`. Install it in Windows Settings > Time & language > Language & region > Language options. Availability depends on the Windows installation and language. OCR returns text for copying; it does not yet create a searchable PDF text layer. Recognition can contain errors.
 
-PDF forms are displayed but filling interactive fields is not supported yet. Supported standalone text-note comments can be edited and deleted, and ordinary highlights can be removed. Linked/reply/popup, locked, hidden and other unsupported annotation types remain read-only. Annotation changes require the document modification and annotation permissions. Copy restrictions hide note content and disable content editing. Images can be viewed but not edited. The print command prints all pages, scaled to the selected printer's printable area. No cryptographic signing or redaction tools are included.
+PDF forms are displayed but filling interactive fields is not supported yet. Supported standalone text-note comments can be edited and deleted, and ordinary highlights can be removed. Linked/reply/popup, locked, hidden and other unsupported annotation types remain read-only. Annotation changes require the document modification and annotation permissions. Copy restrictions hide note content and disable content editing. Images can be viewed but not edited. The print dialog offers fit-to-printable-area and actual-size scaling. At actual size the dialog warns when pages exceed the printable area. No cryptographic signing or redaction tools are included.
 
 Password-protected documents can be opened with a valid password. Saved copies are not encrypted; PolyPDF does not create or preserve password protection. Signed PDFs show a warning before editing; changed documents do not preserve signature validity. Respect the original document's restrictions. Keep originals when working with protected or signed files.
 

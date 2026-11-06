@@ -1,5 +1,14 @@
 # PolyPDF changelog
 
+## 0.4.0
+
+- Select multiple page thumbnails with Ctrl or Shift and rotate or delete them in one undoable action.
+- Drag selected thumbnails to reorder pages while keeping their relative order.
+- Extract selected pages or a validated custom range to a separate PDF with a page summary.
+- Review and reorder PDF files before merging them into the current document.
+- Print the whole document, the current page, selected thumbnails or a custom range.
+- Choose copies and fit-to-printable-area or actual-size scaling, with a warning when actual-size output will be clipped.
+
 ## 0.3.1
 
 - Move automatic and manual update checks to the official PolyStudio update service.
