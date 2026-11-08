@@ -1,5 +1,12 @@
 # PolyPDF changelog
 
+## 0.4.5
+
+- Choose an installed Windows OCR language and recognise the current page, selected thumbnails or a custom range.
+- Follow OCR progress, cancel after the current page and retry failed or unprocessed pages.
+- Review results by page, jump to the source, copy text or export ordered UTF-8 text.
+- Keep OCR on the device and limit image size when processing large scans.
+
 ## 0.4.0
 
 - Select multiple page thumbnails with Ctrl or Shift and rotate or delete them in one undoable action.

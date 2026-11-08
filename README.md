@@ -1,16 +1,16 @@
 # PolyPDF
 
-**[Download PolyPDF 0.4.0 for Windows](https://downloads.polystudio.tools/polypdf/0.4.0/PolyPDF-0.4.0-setup.exe)**
+**[Download PolyPDF 0.4.5 for Windows](https://downloads.polystudio.tools/polypdf/0.4.5/PolyPDF-0.4.5-setup.exe)**
 
 A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# / .NET 10 / WPF. English interface, light and dark themes, local document processing, no accounts or subscription.
 
 ## Run the finished app
 
-Current version: **0.4.0 (pre-1.0)**. [Download the Windows installer](https://downloads.polystudio.tools/polypdf/0.4.0/PolyPDF-0.4.0-setup.exe). Installed copies receive signed updates from PolyStudio.
+Current version: **0.4.5 (pre-1.0)**. [Download the Windows installer](https://downloads.polystudio.tools/polypdf/0.4.5/PolyPDF-0.4.5-setup.exe). Installed copies receive signed updates from PolyStudio.
 
-Run `PolyPDF-0.4.0-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.4.5-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.4.0-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
+For portable use, extract `PolyPDF-0.4.5-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
 
 The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
 
@@ -47,7 +47,7 @@ Newly opened PDFs and document-tab switches use Fit Width. Fit Height remains av
 - Ctrl- or Shift-select thumbnails to rotate or delete a group. Drag selected thumbnails to reorder them. Extract selected pages or a custom range to a new PDF and confirm the file order before merging.
 - Undo and redo document edits. History is kept in memory (up to 25 revisions, with a 96 MB target budget; a single large revision can exceed it).
 - Save, Save as, and export a page to PNG. Print all pages, the current page, selected thumbnails or a custom range with copy count and scaling options.
-- Offline OCR of the current page using Windows OCR, with editable language code and copyable results.
+- Offline Windows OCR for the current page, selected thumbnails or a custom range, with progress, cancellation and UTF-8 text export.
 - Automatic encrypted recovery checkpoints for unsaved work, with restoration offered after an interrupted session.
 
 ## Recovery and reliability
@@ -74,7 +74,7 @@ Existing text editing is intentionally limited to top-level, unskewed and unrota
 
 Move text supports top-level text objects carrying PolyPDF insertion marks. It does not move original third-party text, scans, images, comments, highlights or drawing strokes. Other PDF editors may flatten or discard these marks, preventing later selection. Use Text properties to edit supported block content, font, size (6–160 pt) and custom colour (#RRGGBB or #AARRGGBB) with Apply/Cancel. Blank lines, rotation and drawing order are preserved. Mixed formatting remains read-only.
 
-OCR requires the matching Windows OCR language pack, such as `en-US` or `hr-HR`. Install it in Windows Settings > Time & language > Language & region > Language options. Availability depends on the Windows installation and language. OCR returns text for copying; it does not yet create a searchable PDF text layer. Recognition can contain errors.
+OCR requires the matching Windows OCR language pack, such as `en-US` or `hr-HR`. Install it in Windows Settings > Time & language > Language & region > Language options. Availability depends on the Windows installation and language. In View, open OCR to choose an installed language and up to 100 pages. Cancel waits for the current page and keeps completed results. Review the text by page before copying or exporting to a separate UTF-8 TXT file.
 
 PDF forms are displayed but filling interactive fields is not supported yet. Supported standalone text-note comments can be edited and deleted, and ordinary highlights can be removed. Linked/reply/popup, locked, hidden and other unsupported annotation types remain read-only. Annotation changes require the document modification and annotation permissions. Copy restrictions hide note content and disable content editing. Images can be viewed but not edited. The print dialog offers fit-to-printable-area and actual-size scaling. At actual size the dialog warns when pages exceed the printable area. No cryptographic signing or redaction tools are included.
 
