@@ -1,5 +1,11 @@
 # PolyPDF changelog
 
+## 0.5.0
+
+- Rebuilt the Windows desktop application in Rust with a redesigned PDF workspace, dark and light themes, and ruby accents.
+- Preserved editing and page organisation on the existing PDFium engine.
+- Kept local Windows OCR, encrypted recovery and the signed update channel.
+
 ## 0.4.5
 
 - Choose an installed Windows OCR language and recognise the current page, selected thumbnails or a custom range.

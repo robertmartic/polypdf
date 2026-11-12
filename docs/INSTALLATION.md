@@ -5,7 +5,7 @@ PolyPDF provides a conventional per-user installer. It does not require administ
 ## Install
 
 1. Close every PolyPDF window.
-2. Download and run [PolyPDF-0.4.5-setup.exe](https://downloads.polystudio.tools/polypdf/0.4.5/PolyPDF-0.4.5-setup.exe).
+2. Download and run [PolyPDF-0.5.0-setup.exe](https://downloads.polystudio.tools/polypdf/0.5.0/PolyPDF-0.5.0-setup.exe).
 3. Choose desktop and Start menu shortcuts on the components page.
 4. Choose a new, empty folder, normally `%LOCALAPPDATA%\Programs\PolyPDF`, then install.
 5. Launch from the selected shortcut or the installer's optional launch checkbox.
@@ -13,6 +13,8 @@ PolyPDF provides a conventional per-user installer. It does not require administ
 The installer registers PolyPDF in Windows installed apps and in Open with. It does not change the default PDF application. To select a default, use Windows Settings or Open with > Choose another app.
 
 ## Reinstall or upgrade
+
+For an installed 0.4.5 copy, use **About > Updates > Check for updates**. The signed migration replaces the old application files and keeps your documents and preferences.
 
 Close PolyPDF and run the same or newer installer. The registered folder and shortcut choices are reused. An older version is rejected. To move the application, uninstall first, then install into the new folder; preferences are preserved.
 
@@ -22,7 +24,7 @@ Installed copies can use About > Updates and optional startup checks. See UPDATE
 
 ## One-time transition to the 0.1.0 baseline
 
-Earlier development installers numbered 0.2.x through 0.5.0 compare as newer than the reset 0.1.0 baseline. The updater and installer intentionally retain their downgrade protection. Download and verify the current setup before removing such a development build. Close PolyPDF and copy %LOCALAPPDATA%\PolyPDF to a private backup location; recovery data remains tied to the current Windows user and machine. Uninstall the earlier development build through Windows installed apps, then install PolyPDF-0.4.5-setup.exe into the normal empty program folder and select your shortcut choices. Normal upgrades from the published 0.2.0 and later line update in place and preserve settings, document recovery, installation location and shortcut choices.
+Earlier development installers numbered 0.2.x through 0.5.0 compare as newer than the reset 0.1.0 baseline. The updater and installer intentionally retain their downgrade protection. Download and verify the current setup before removing such a development build. Close PolyPDF and copy %LOCALAPPDATA%\PolyPDF to a private backup location; recovery data remains tied to the current Windows user and machine. Uninstall the earlier development build through Windows installed apps, then install PolyPDF-0.5.0-setup.exe into the normal empty program folder and select your shortcut choices. Normal upgrades from the published 0.2.0 and later line update in place and preserve settings, document recovery, installation location and shortcut choices.
 
 ## Uninstall
 

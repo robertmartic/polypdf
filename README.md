@@ -1,20 +1,20 @@
 # PolyPDF
 
-**[Download PolyPDF 0.4.5 for Windows](https://downloads.polystudio.tools/polypdf/0.4.5/PolyPDF-0.4.5-setup.exe)**
+**[Download PolyPDF 0.5.0 for Windows](https://downloads.polystudio.tools/polypdf/0.5.0/PolyPDF-0.5.0-setup.exe)**
 
-A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. C# / .NET 10 / WPF. English interface, light and dark themes, local document processing, no accounts or subscription.
+A PDF workspace for Windows 10 (version 2004 or newer) and Windows 11, x64. Native Rust with PDFium. English interface, light and dark themes, local document processing, no accounts or subscription.
 
 ## Run the finished app
 
-Current version: **0.4.5 (pre-1.0)**. [Download the Windows installer](https://downloads.polystudio.tools/polypdf/0.4.5/PolyPDF-0.4.5-setup.exe). Installed copies receive signed updates from PolyStudio.
+Current version: **0.5.0 (pre-1.0)**. [Download the Windows installer](https://downloads.polystudio.tools/polypdf/0.5.0/PolyPDF-0.5.0-setup.exe). Installed copies receive signed updates from PolyStudio.
 
-Run `PolyPDF-0.4.5-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
+Run `PolyPDF-0.5.0-setup.exe` for a conventional installation with a folder choice, optional desktop/Start menu shortcuts, Windows installed-app registration, Open with integration and an uninstaller. No administrator privileges or separate .NET installation are required. Close PolyPDF before setup. See [installation instructions](docs/INSTALLATION.md).
 
-For portable use, extract `PolyPDF-0.4.5-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together. In a developer workspace, the prepared executable is at `dist/PolyPDF/PolyPDF.exe`.
+For portable use, extract `PolyPDF-0.5.0-win-x64.zip`, then open `PolyPDF/PolyPDF.exe`. Keep the complete folder together.
 
-The current version is shown below the PolyPDF name, in the window title, and in About. All three read the compiled assembly version, set by the project's Version property.
+The current version appears in About.
 
-Version 0.3.0 adds a whole-document Annotations panel and supported annotation editing/deletion to the compact vector toolbar workflow. The initial 0.1.0 baseline includes supported text movement, annotations, page organisation, local OCR, encrypted recovery, conventional installation and in-app updates. Release notes are embedded in About > Changelog and can be read offline. Fit Width and Fit Height follow window resizing, page navigation and rotation; manual zoom exits fitting mode. Windows-owned file and printer pickers retain the operating system's appearance. See ROADMAP.md for subsequent milestones.
+Version 0.5.0 introduces the redesigned Rust workspace. Use View > Two pages to see the next page beside the active document page. Use Annotate > Draw to choose an ink colour. Release notes are available in About.
 
 The conventional installer replaces the earlier copy-only `Install.cmd` workflow. It preserves the registered installation folder and shortcut choices on reinstall, rejects downgrades, and never forces the default PDF association. To choose PolyPDF as the default, use Windows Settings > Apps > Default apps, or Open with > Choose another app.
 
